@@ -1233,6 +1233,32 @@
       "CreatedDateTime": "2024-04-24T15:31:43.4884252Z",
       "WorkloadArea": "Identity and access",
       "SubArea": "Governance"
+    },
+	 {
+      "ChangeList": [
+        {
+          "Id": "e2908217-faad-46e7-8496-cc3285f3c2f2",
+          "ApiChange": "Resource",
+          "ChangedApiName": "requestActivity",
+          "ChangeType": "Addition",
+          "Description": "Added the [requestActivity](https://learn.microsoft.com/en-us/graph/api/resources/requestActivity?view=graph-rest-beta) resource.",
+          "Target": "requestActivity"
+        },
+        {
+          "Id": "e2908217-faad-46e7-8496-cc3285f3c2f2",
+          "ApiChange": "Property",
+          "ChangedApiName": "history",
+          "ChangeType": "Addition",
+          "Description": "Added the **history** property to the [accessPackageAssignmentRequest](https://learn.microsoft.com/en-us/graph/api/resources/accessPackageAssignmentRequest?view=graph-rest-beta) resource.",
+          "Target": "accessPackageAssignmentRequest"
+        }
+      ],
+      "Id": "e2908217-faad-46e7-8496-cc3285f3c2f2",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2024-09-26T22:43:57.0535098Z",
+      "WorkloadArea": "Identity and access",
+      "SubArea": "Governance"
     }
   ]
 }

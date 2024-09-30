@@ -41,6 +41,7 @@ In [Microsoft Entra Entitlement Management](entitlementmanagement-overview.md), 
 |expirationDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`|
 |id|String| Read-only.|
 |isValidationOnly|Boolean|True if the request isn't to be processed for assignment.|
+|history|[requestActivity](requestactivity.md) collection| A list of request histories to describe user request and approval detail information.|
 |justification|String|The requestor's supplied justification.|
 |requestState|String|One of `PendingApproval`, `Canceled`,  `Denied`, `Delivering`, `Delivered`, `PartiallyDelivered`, `DeliveryFailed`, `Submitted`, or `Scheduled`. Read-only.|
 |requestStatus|String|More information on the request processing status. Read-only.|
@@ -57,9 +58,7 @@ In [Microsoft Entra Entitlement Management](entitlementmanagement-overview.md), 
 |accessPackageAssignment|[accessPackageAssignment](accesspackageassignment.md)| For a **requestType** of `UserAdd` or `AdminAdd`, an access package assignment requested to be created. For a **requestType** of `UserRemove`, `AdminRemove`, or `SystemRemove`, this property has the `id` property of an existing assignment to be removed. Supports `$expand`.|
 |requestor|[accessPackageSubject](accesspackagesubject.md)| The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports `$expand`.|
 
-
 ## JSON representation
-
 
 The following JSON representation shows the resource type.
 
@@ -84,6 +83,11 @@ The following JSON representation shows the resource type.
   "completedDate": "String (timestamp)",
   "expirationDateTime": "String (timestamp)",
   "justification": "String",
+  "history": [
+    {
+      "@odata.type": "microsoft.graph.requestActivity"
+    }
+  ],
   "schedule": {
     "@odata.type": "microsoft.graph.requestSchedule"
   },

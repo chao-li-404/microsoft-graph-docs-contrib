@@ -136,6 +136,24 @@ Content-type: application/json
             "type": "notSpecified"
         }
     },
+    "history": [
+        {
+            "action": "Accepted",
+            "userDisplayName": "",
+            "userPrincipalName": "",
+            "actionDateTime": "2024-02-05T12:29:04.4691802Z",
+            "scheduledDateTime": null,
+            "detail": "Email is sent to: xxxx@microsoft.com"
+        },
+        {
+            "action": "WaitingForCallback",
+            "userDisplayName": null,
+            "userPrincipalName": null,
+            "actionDateTime": "2024-02-05T12:29:10.7065266Z",
+            "scheduledDateTime": null,
+            "detail": "Extension Name: ElmSapCustomExtensionPROD, Correlation Id: 08585328947903949556784669046CU27"
+        }
+    ], 
     "customExtensionCalloutInstances": [
         {
             "status": "callbackReceived",
